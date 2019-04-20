@@ -7,17 +7,11 @@ export default class VehicleIndex extends Component {
     state = {
         vehicles: []
     }
-
-    componentDidMount () {
-        this.setState({ vehicles: this.props.vehicles})
-        console.log(this.state);
-        debugger
-    }
     
     render() {
-        let { vehicles } = this.state;
+        let { vehicles } = this.props;
 
-        console.log(this.state);
+        console.log(this.props);
         debugger
         return (
             <div className="vehiclesContainer">
