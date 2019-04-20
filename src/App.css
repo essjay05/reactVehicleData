@@ -20,7 +20,14 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #ff4757;
+}
+/* Fonts and Colors */
+h1, h2, h3, h4, p, a {
+  font-color: #a4b0be;
+}
+a:hover {
+  font-color: #ff4757;
 }
 
 @keyframes App-logo-spin {
@@ -31,3 +38,4 @@
     transform: rotate(360deg);
   }
 }
+
