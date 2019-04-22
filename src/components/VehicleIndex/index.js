@@ -29,11 +29,11 @@ export default class VehicleIndex extends Component {
         return (
             <div className="vehiclesContainer">
                 <h1 className="headTitle">Vehicle Index</h1>
+                <p>Click on Vehicle Name for Details</p>
                 <ul>
                     <div className="vehicle">
                     {vehicles.map((vehicle, i) => {
                     return<div key={i}>
-                        
                         <Vehicle
                             key={i}
                             vehicle={ vehicle }

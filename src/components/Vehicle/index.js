@@ -15,14 +15,13 @@ export default class Vehicle extends Component {
         return (
         <div className="container">
             <ul className="vehicleList">
-                <li>
-                    <h3>Testing header {vehicle.id}</h3>
-                    <Link
+                <li><Link
                     className="nav-link"
                     vehicle={ vehicle }
                     vehicleid={ vehicle.id }
-                    to={`/vehicles/${vehicle.id}`}><p>{vehicle.Year} {vehicle.Make} {vehicle.Model} Details </p>
-                </Link></li>
+                    to={`/vehicles/${vehicle.id}`}>{vehicle.Year} {vehicle.Make} {vehicle.Model}
+                    </Link>
+                </li>
             </ul>
         </div>
         )

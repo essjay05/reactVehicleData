@@ -41,7 +41,7 @@ class App extends Component {
 					return <Search {...props} vehicles={this.state.vehicles} />
 				}} />
 				{/* Individual vehicle's profile */}
-				<Route exact path="/vehicles/:id" render={(props) => {
+				<Route exact path="/vehicleShow/:id" render={(props) => {
 					return <VehicleDetail {...props} vehicles={this.state.vehicles} />
 				}} /> 
 				<Route path="/vehicle" render={(props) => {
