@@ -7,7 +7,7 @@ export default class VehicleIndex extends Component {
     state = {
         vehicles: []
     }
-    
+
     render() {
         let { vehicles } = this.props;
 
@@ -20,6 +20,7 @@ export default class VehicleIndex extends Component {
                     <div className="vehicle">
                     {vehicles.map((vehicle, i) => {
                     return<div key={i}>
+                        
                         <Vehicle
                             key={i}
                             vehicle={ vehicle }

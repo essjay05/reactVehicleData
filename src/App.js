@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Vehicle from './components/Vehicle';
 import VehicleIndex from './components/VehicleIndex';
+import VehicleDetail from './components/VehicleDetail';
 import Search from './components/Search';
 import logo from './logo.svg';
 import './App.css';
@@ -28,15 +29,23 @@ class App extends Component {
 	
 	render() {
 		let { vehicles } = this.state;
+		console.log(vehicles[0]);
 		return (
 		<Layout>
 			<Switch>
 				<Route exact path="/" component={Home}/>
 				<Route path="/vehicles" render={(props) => {
-					return <VehicleIndex {...props} vehicles={this.state.vehicles} />
+					return <VehicleIndex {...props} vehicles={vehicles} />
 				}} />
 				<Route path="/search" render={(props) => {
 					return <Search {...props} vehicles={this.state.vehicles} />
+				}} />
+				{/* Individual vehicle's profile */}
+				<Route exact path="/vehicles/:id" render={(props) => {
+					return <VehicleDetail {...props} vehicles={this.state.vehicles} />
+				}} /> 
+				<Route path="/vehicle" render={(props) => {
+					return <Vehicle {...props} vehicles={vehicles} />
 				}} />
 			</Switch>
 		</Layout>
