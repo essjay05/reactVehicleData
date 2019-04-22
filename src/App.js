@@ -45,7 +45,7 @@ class App extends Component {
 					return <VehicleDetail {...props} vehicles={this.state.vehicles} />
 				}} /> 
 				<Route path="/vehicle" render={(props) => {
-					return <Vehicle {...props} vehicles={vehicles} />
+					return <Vehicle {...props} vehicles={this.state.vehicles} />
 				}} />
 			</Switch>
 		</Layout>
