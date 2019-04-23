@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import Vehicle from '../Vehicle';
 import './VehicleIndex.css';
 
@@ -18,13 +18,13 @@ export default class VehicleIndex extends Component {
     //     .catch(err => {
     //         debugger
     //     })
-    // }
+    // } 
 
     render() {
         let { vehicles } = this.props;
-        console.log(vehicles);
-        console.log(vehicles[0]);
-        debugger
+        // console.log(vehicles);
+        // console.log(vehicles[0]);
+        // debugger
 
         return (
             <div className="vehiclesContainer">
@@ -33,14 +33,11 @@ export default class VehicleIndex extends Component {
                 <ul>
                     <div className="vehicle">
                     {vehicles.map((vehicle, i) => {
-                    return<div key={i}>
-                        <Vehicle
-                            key={i}
+                    return<Vehicle
+                            key={ i }
                             vehicle={ vehicle }
                             vehicles= { vehicles }
-                            onClick={ this.handleClick }
-                        />
-                        </div>   
+                            />  
                     })}
                     </div>
                 </ul>

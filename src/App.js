@@ -6,9 +6,11 @@ import Vehicle from './components/Vehicle';
 import VehicleIndex from './components/VehicleIndex';
 import VehicleDetail from './components/VehicleDetail';
 import Search from './components/Search';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
+
+// const 
 
 class App extends Component {
 	state = {
@@ -29,7 +31,7 @@ class App extends Component {
 	
 	render() {
 		let { vehicles } = this.state;
-		console.log(vehicles[0]);
+		// console.log(vehicles[0]);
 		return (
 		<Layout>
 			<Switch>
@@ -38,14 +40,14 @@ class App extends Component {
 					return <VehicleIndex {...props} vehicles={vehicles} />
 				}} />
 				<Route path="/search" render={(props) => {
-					return <Search {...props} vehicles={this.state.vehicles} />
+					return <Search {...props} vehicles={vehicles} />
 				}} />
 				{/* Individual vehicle's profile */}
 				<Route exact path="/vehicleShow/:id" render={(props) => {
-					return <VehicleDetail {...props} vehicles={this.state.vehicles} />
+					return <VehicleDetail {...props} vehicles={vehicles}/>
 				}} /> 
 				<Route path="/vehicle" render={(props) => {
-					return <Vehicle {...props} vehicles={this.state.vehicles} />
+					return <Vehicle {...props} vehicles={vehicles} />
 				}} />
 			</Switch>
 		</Layout>

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Navbar from './Navbar';
 
-export default ({ children }) => (
-    <main>
-        <Navbar />
-        <div className="container">
-            { children }
-        </div>
-    </main>
-)
+export default class Layout extends Component {
+    render () {
+        return (
+        <main>
+            <Navbar />
+            <div className="container">
+                { this.props.children }
+            </div>
+        </main>
+        )
+    }
+}
