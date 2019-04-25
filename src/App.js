@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Vehicle from './components/Vehicle';
 import VehicleIndex from './components/VehicleIndex';
 import VehicleDetail from './components/VehicleDetail';
+import AutoComplete from './components/AutoComplete';
 import Search from './components/Search';
 // import logo from './logo.svg';
 import './App.css';
@@ -31,7 +32,7 @@ class App extends Component {
 	
 	render() {
 		let { vehicles } = this.state;
-		// console.log(vehicles[0]);
+		console.log(vehicles[0]);
 		return (
 		<Layout>
 			<Switch>
@@ -48,6 +49,9 @@ class App extends Component {
 				}} /> 
 				<Route path="/vehicle" render={(props) => {
 					return <Vehicle {...props} vehicles={vehicles} />
+				}} />
+				<Route path="/autocomplete" render={(props) => {
+					return <AutoComplete {...props} vehicles={vehicles} />
 				}} />
 			</Switch>
 		</Layout>
