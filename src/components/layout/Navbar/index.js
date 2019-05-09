@@ -10,6 +10,7 @@ export default () => (
         <div>
             <Link to="/vehicles">Vehicle List</Link>
             <Link to="/search">Search</Link>
+            <Link to="/autocomplete">Filter List</Link>
         </div>
     </nav>
 )
